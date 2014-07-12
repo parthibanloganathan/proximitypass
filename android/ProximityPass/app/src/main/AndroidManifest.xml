@@ -18,20 +18,20 @@
             </intent-filter>
         </activity>
 
-        <service android:enabled="true" android:name=".SMSService"
-            android:label="SMS Service"/>
+        <service android:enabled="true" android:name=".SMSService" />
 
         <receiver android:name=".SMSReceiver">
-            <intent-filter android:priority="2147483647">
-                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
-                <category android:name="android.intent.category.DEFAULT" />
+            <intent-filter android:priority="1000" android:permission="android.permission.BROADCAST_SMS">
+                <action android:name="android.provider.Telephony.SMS_DELIVER_ACTION" />
             </intent-filter>
         </receiver>
 
+
     </application>
 
-    <uses-permission android:name="android.permission.READ_SMS"></uses-permission>
     <uses-permission android:name="android.permission.RECIEVE_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_SMS"></uses-permission>
     <uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
 
 </manifest>

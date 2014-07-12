@@ -17,20 +17,20 @@ public class SMSService extends Service {
 
         super.onCreate();
 
-        receiver = new SMSReceiver();
-        intentFilter = new IntentFilter("android.provider.Telephony.SMS_RECEIVED");
-        intentFilter.setPriority(2147483647);
-        registerReceiver(receiver, intentFilter);
+//        receiver = new SMSReceiver();
+//        intentFilter = new IntentFilter("android.provider.Telephony.SMS_RECEIVED");
+//        intentFilter.setPriority(2147483647);
+//        registerReceiver(receiver, intentFilter);
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.e(TAG, "On started service");
 
-        receiver = new SMSReceiver();
-        intentFilter = new IntentFilter("android.provider.Telephony.SMS_RECEIVED");
-        intentFilter.setPriority(2147483647);
-        registerReceiver(receiver, intentFilter);
+//        receiver = new SMSReceiver();
+//        intentFilter = new IntentFilter("android.provider.Telephony.SMS_RECEIVED");
+//        intentFilter.setPriority(2147483647);
+//        registerReceiver(receiver, intentFilter);
 
         return START_STICKY;
     }
