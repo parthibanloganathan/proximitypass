@@ -1,0 +1,19 @@
+{
+  "name": "Proximity Pass",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Proximity based password entry",
+  "permissions": [
+      "tabs", "http://*/*"
+    ],
+  "background": {
+      "scripts": ["js/controller.js"],
+      "persistent": true
+    },
+  "content_scripts": [
+      {
+        "matches": ["http://accounts.google.com/SecondFactor?*", "https://accounts.google.com/SecondFactor?*"],
+        "js": ["js/jquery.min.js","js/content.js"]
+      }
+  ]
+}
